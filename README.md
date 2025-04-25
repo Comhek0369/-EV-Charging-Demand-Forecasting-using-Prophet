@@ -37,7 +37,31 @@ The merged dataset includes:
 The dataset is preprocessed using `pandas` and fed into the forecasting model.
 
 ---
+## 📈 Forecasting Approach
 
+### ✔️ Data Simulation
+```python
+df['Estimated_Demand_kWh'] = (
+    df['Avg Traffic Volume'] * 0.05 +
+    df['Temp_C'] * 2 +
+    np.random.normal(0, 5, size=len(df))  # Add noise
+)
+```
+### ✔️ Model Training with Prophet
+```python
+demand_df = df[['Date', 'Estimated_Demand_kWh']].rename(columns={
+    'Date': 'ds',
+    'Estimated_Demand_kWh': 'y'
+})
+model = Prophet(daily_seasonality=True)
+model.fit(demand_df)
+```
+### ✔️ Forecast Generation
+```python
+future = model.make_future_dataframe(periods=30)
+forecast = model.predict(future)
+```
+---
 ## 🖼️ Visualizations
 ### 🔮 Forecast Plot
 Forecast for 30 days ahead with uncertainty intervals:
@@ -60,21 +84,22 @@ The daily pattern reflects morning and late evening peaks.
 
 Forecast confidence intervals highlight the variability and seasonality in usage.
 
-### 📌 How to Run
-Clone the repository:
-
-bash
-Copy
-Edit
+## 📌 How to Run
+### Clone the repository:
+```python
 git clone https://github.com/your-username/ev-charging-forecast.git
 cd ev-charging-forecast
-Install requirements:
+```
 
-bash
-Copy
-Edit
+### Install the requirements:
+```python
 pip install pandas numpy matplotlib prophet
+```
+
 Run the notebook: Open Forecasting.ipynb in Jupyter or VS Code and execute all cells.
+
+
+
 
 ## 📄 Author
 Harsh k.
