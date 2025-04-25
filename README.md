@@ -62,27 +62,11 @@ future = model.make_future_dataframe(periods=30)
 forecast = model.predict(future)
 ```
 ---
-## 🖼️ Visualizations
-### 🔮 Forecast Plot
-Forecast for 30 days ahead with uncertainty intervals:
-
-
-### 📅 Seasonal Components
-Trend: General decrease in demand over time
-
-Weekly Pattern: Peaks on Tuesdays and Mondays
-
-Daily Pattern: Peaks at midnight and low activity mid-day
-
-
-### 🧠 Key Insights
-Weekdays, especially Tuesdays, exhibit the highest charging demand.
-
-Weekends show significantly lower demand.
-
-The daily pattern reflects morning and late evening peaks.
-
-Forecast confidence intervals highlight the variability and seasonality in usage.
+## 🧾 Forecast Screenshort
+| 📌 | ![Screenshot](./Screenshot%20(341).png)
+ ![Screenshot](./Screenshot%20(342).png)
+ ![Screenshot](./Screenshot%20(343).png)
+ 
 
 ## 📌 How to Run
 ### Clone the repository:
