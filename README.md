@@ -87,7 +87,7 @@ Forecast confidence intervals highlight the variability and seasonality in usage
 ## 📌 How to Run
 ### Clone the repository:
 ```python
-git clone https://github.com/your-username/ev-charging-forecast.git
+git clone https://github.com/Comhek0369/-EV-Charging-Demand-Forecasting-using-Prophet.git
 cd ev-charging-forecast
 ```
 
@@ -101,9 +101,9 @@ Run the notebook: Open Forecasting.ipynb in Jupyter or VS Code and execute all c
 
 
 
-## 📄 Author
-Harsh k.
+## Author
+Harsh katariya
 
 ## 📃 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License
 
